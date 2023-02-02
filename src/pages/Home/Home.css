@@ -1,0 +1,17 @@
+.container  {
+    display: flex;
+
+}
+
+.sidebar {
+    flex: 1.2;
+}
+
+
+.studentDetail {
+    flex: 5;
+}
+
+.dataTable {
+    flex: 5;
+}
