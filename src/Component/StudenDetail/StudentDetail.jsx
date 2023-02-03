@@ -8,16 +8,16 @@ import {
   serverTimestamp,
   setDoc,
 } from "firebase/firestore";
-import {db} from "../../firebase"
+import {db} from "../firebase"
 
 function StudentDetail() {
   const [formData, setFormData] = useState({
     firstName: "",
     middleName: "",
     lastName: "",
-    class: "1",
+    class: "",
     division: "A",
-    rollNumber: "",
+    rollNumber: "1",
     address1: "",
     address2: "",
     landmark: "",
@@ -34,16 +34,38 @@ function StudentDetail() {
     e.preventDefault();
     try {
      
-      await setDoc(doc(db, "Students"), {
+      await setDoc(doc(db, "Students", formData.rollNumber), {
         ...formData,
+      
+
         timeStamp: serverTimestamp(),
-      });
+
+      }
+      );
+      alert("Form Submitted");
+      setFormData({
+        firstName: "",
+        middleName: "",
+        lastName: "",
+        class: "",
+        division: "A",
+        rollNumber: "1",
+        address1: "",
+        address2: "",
+        landmark: "",
+        city: "",
+        pincode: "",
+      })
      
       // navigate(-1)
-    } catch (err) {
+    } 
+    catch (err) {
       console.log(err);
+      console.log("h")
     }
   };
+
+  
 
 
 

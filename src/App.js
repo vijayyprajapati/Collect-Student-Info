@@ -3,8 +3,12 @@ import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import {Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Sidebar from "./Component/Sidebar/Sidebar";
 
+import DataTable from "./Component/DataTable/DataTable.jsx"
+import Sidebar from "./Component/Sidebar/Sidebar";
+import Navbar from "./Component/Navbar/Navbar";
+import StudentDetail from "./Component/StudenDetail/StudentDetail";
+import ManageTable from "./pages/ManageTable/ManageTable";
 
 
 function App() {
@@ -12,13 +16,19 @@ function App() {
   return (
     <div className="App">
      
-      {/* <h1>Home</h1> */}
-        {/* <Routes>
+      
+        <Routes>
           
-          <Route path="/" element={<Login />} />
-          <Route path= "/home" element={<Home />} />
-        </Routes> */}
-        <Home />
+          {/* <Route path="/" element={<Login />} /> */}
+          <Route path= "/" element={<Home />} />
+          <Route path= "/table" element={< ManageTable/>} />
+        </Routes>
+        
+        
+        {/* <Sidebar /> */}
+        {/* <Navbar /> */}
+        {/* <StudentDetail /> */}
+        {/* <DataTable /> */}
         
       
     </div>

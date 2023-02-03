@@ -8,7 +8,7 @@
     justify-content:space-between;
     align-items: center;
     margin-right: 100px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 line {
     display: flex;
@@ -20,7 +20,7 @@ line {
 }
 
 input {
-    width: 22rem;
+    width: 20rem;
     flex: 1;
     height: 40px;
     margin: 20px;
@@ -28,14 +28,14 @@ input {
 }
 
 select {
-    width: 23rem;
+    width: 21rem;
     flex: 1;
     height: 40px;
     margin: 20px;
     outline: none;
 }
 .line-3  input {
-    width: 34.8rem;
+    width: 31.8rem;
 }
 input::placeholder {
     font-size: 17px;
@@ -65,7 +65,7 @@ select[type="number"]
 
 
 button {
-    width: 23rem;
+    width: 21rem;
     height: 40px;
     margin-left: 20px;
     background: #F33823;
